@@ -2,61 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App using css and Javascript using a third party API</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css" integrity="sha512-r/Gan7PMSRovDus++vDS2Ayutc/cSdl268u047n4z+k7GYuR7Hiw71FsT3QQxdKJBVHYttOJ6IGLnlM9IoMToQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Weather Application</title>
 </head>
 <body>
     <div class="container">
-        <div class="search-box">
-            <i class='bx bxs-map'></i>
-            <input type="text" placeholder="Enter your location">
-            <button class="bx bx-search"></button>
+        <header>
+            <h1>Weather App</h1>
+        </header>
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter city">
+            <button onclick="getWeather()"> Get Weather</button>
         </div>
-    
-        <div class="weather-box">
-            <div class="box info-weather">
-                <div class="weather">
-                    <img src="assets\cloudy.png"></img>
-                    <p class="temperature">16 <span>℃</span></p>
-                    <p class="description">Broken Clouds</p>
-                </div>
-            </div>
-        </div>
-        <div class="weather-details">
-            <div class="humidity">
-                <i class='bx bx-water'></i>
-                <div class="text">
-                    <div class="info-humidity">
-                        <span>0%</span>
-                    </div>
-                    <p>Humidity</p>
-                </div>
-            </div>
-
-            <div class="wind">
-                <div class="humidity">
-                    <i class='bx bx-wind' ></i>
-                    <div class="text">
-                        <div class="info-wind">
-                            <span>0Km/h</span>
-                        </div>
-                        <p>Wind Speed</p>
-                    </div>
-                </div>
-
-
-
-        </div>
+        <div id="loader">Loading...</div>
+        <div id="weatherInfo" class="weather-info"></div>
     </div>
-
-
-
-
-
-
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,149 +1,102 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
-* {
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #3498db, #2c3e50);
+    color: #000000;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-body {
-    display:flex;
-    justify-content: center;
+    display: flex;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
-    background: url('assets/background.jpg');
-    background-position: center;
 }
 
 .container {
-    position: relative;
-    width: 400px;
-    height: 555px;
-    background: rgb(255,255,255, 0.2);
-    backdrop-filter: blur(30px);
-    border-radius: 16px;
-    padding: 20px;
-    color: #fff;
-    border: 2px solid rgba(255,255,255 .2);
-}
-
-.search-box {
-    position: relative;
-    width: 100%;
-    height: 55px;
-    display:flex;
-    align-items: center;
-}
-
-.search-box input {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: 2px solid rgba(255,255,255, .2);
-    outline: none;
-    border-radius: 10px;
-    font-size: 22px;
-    color: #fff;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding: 0 48px 0 42px;
-}
-
-.search-box input::placeholder {
-    color: #fff;
-    text-transform: capitalize;
-}
-
-.search-box i {
-    position: absolute;
-    left: 10px;
-    
-    font-size: 28px;
-}
-.search-box button {
-    position: absolute;
-    padding: 0 40px 0 5px;
-    right: 0;
-    height: 100%;
-    width: 40px;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 28px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.weather-box {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 15px;
     text-align: center;
-    margin: 40px 0;
-}
-
-.weather-box img {
-    width: 60%;
-}
-
-.weather-box .temperature {
-    position: relative;
-    margin: 20px 0 6px -30px;
-    font-size: 64px;
-    line-height: 1;
-    font-weight: 700;
-    
-}
-
-.weather-box .temperature span {
-    position: absolute;
-    font-size: 24px;
-    margin-left: 4px;
-}
-
-.weather-box .description {
-    font-size: 22px;
-    font-weight: 500;
-    text-transform: capitalize;
-}
-
-.weather-details {
-    position: absolute;
-    display: flex;
-    padding: 0 20px;
-    bottom: 10px;
-    left: 0;
+    max-width: 400px;
     width: 100%;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+    position: relative;
 }
 
-.weather-details .humidity,
-.weather-details .wind {
+.container:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+h1 {
+    color: #3498db;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.search-container {
     display: flex;
-    align-items: center;
-    width: 50%;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.weather-details .humidity {
-    padding-left: 20px;
-    
+input {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #3498db;
+    background: transparent;
+    margin-right: 10px;
+    width: 70%;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #333;
+    transition: border-bottom 0.3s ease;
 }
 
-.weather-details .wind {
-    padding-right: 20px;
-    
+input:focus {
+    outline: none;
+    border-bottom: 2px solid #2980b9;
 }
 
-.weather-details i {
-    font-size: 56px;
-    margin-right: 10px;;
+button {
+    background: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease;
 }
 
-.weather-details span {
-    display:inline-block;
-    font-size: 22px;
-    font-weight: 500;
+button:hover {
+    background: #2980b9;
 }
 
-.weather-details p {
-font-size: 14px;
-font-weight: 500;
+#loader {
+    display: none;
+    margin-top: 20px;
+}
+
+#weatherInfo {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+
+
+#weatherInfo p {
+    color: black;
+}
+
+.weather-icon {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    color: orange;
+}
+
+.error {
+    color: #e74c3c;
+    font-weight: bold;
 }
