@@ -55,5 +55,8 @@ Enter the city name in the input field.
 Click "Get Weather" to fetch and display weather information.
 Enjoy the Weather!
 
+## API Key
+This application uses the OpenWeatherMap API to fetch weather data. Obtain your API key here and add it to the .env file as described in the installation steps.
+
 ## \Contributing
 Contributions are welcome! Please follow the Contributing Guidelines.
