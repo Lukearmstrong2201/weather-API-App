@@ -6,7 +6,7 @@ function getWeather() {
 
     if (!cityInput) {
         console.error('City input is empty.');
-        // You might want to handle this case, e.g., display an error message to the user.
+        //display an error message to the user.
         return;
     }
 
@@ -37,8 +37,8 @@ function displayWeather(data) {
 
     try {
 
-        //this line is for debugging perposes, comment out when not in use!
-        console.log('Weather Data:', data);
+        //This line is for debugging perposes, comment out when not in use!
+        //console.log('Weather Data:', data);
     
         // Ensure the response is valid JSON
         const jsonData = JSON.parse(JSON.stringify(data));
@@ -85,7 +85,7 @@ function displayError(message) {
 }
 
 function mapIconCodeToWeatherIcon(iconCode) {
-    // Example mappings, you might need to adjust these based on your needs
+    // Example mappings
     const iconMappings = {
         '01d': 'wi-day-sunny',
         '02d': 'wi-day-cloudy',
@@ -96,7 +96,7 @@ function mapIconCodeToWeatherIcon(iconCode) {
         '11d': 'wi-thunderstorm',
         '13d': 'wi-snow',
         '50d': 'wi-fog',
-        // Similar mappings for night icons, e.g., '01n': 'wi-night-clear'
+        
     };
 
     return iconMappings[iconCode] || 'wi-day-sunny'; // Default to a sunny icon if not found
